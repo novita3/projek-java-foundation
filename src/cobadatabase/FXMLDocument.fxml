@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="479.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cobadatabase.FXMLDocumentController">
+    <children>
+      <Label layoutX="125.0" layoutY="14.0" prefHeight="65.0" prefWidth="231.0" text="FOOD ORDER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="23.0" layoutY="100.0" prefHeight="211.0" prefWidth="435.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="133.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="302.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID  PESANAN " />
+            <Label text="NAMA MAKANAN " GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="121.0" text="JUMLAH" GridPane.rowIndex="4" />
+            <Label prefHeight="17.0" prefWidth="110.0" text="HARGA  " GridPane.rowIndex="5" />
+            <TextField fx:id="textId" onKeyReleased="#lihatData" prefHeight="24.0" prefWidth="205.0" GridPane.columnIndex="1" />
+            <TextField fx:id="textNama" prefHeight="24.0" prefWidth="231.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="textJumlah" prefHeight="24.0" prefWidth="110.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="textHarga" prefHeight="24.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+              <Label fx:id="label" minHeight="16" minWidth="69" text="NAMA PEMESAN" GridPane.rowIndex="1" />
+            <Label text="ALAMAT" GridPane.rowIndex="2" />
+            <TextField fx:id="textPemesan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textAlamat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <FlowPane layoutX="19.0" layoutY="347.0" prefHeight="30.0" prefWidth="444.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#btnSimpanClicked" prefHeight="22.0" prefWidth="110.0" text="SAVE" />
+            <Button mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="110.0" text="EDIT" />
+            <Button mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="110.0" text="DELETE" />
+            <Button mnemonicParsing="false" onAction="#clear" prefHeight="22.0" prefWidth="110.0" text="CLEAR" />
+         </children>
+      </FlowPane>
+    </children>
+</AnchorPane>
